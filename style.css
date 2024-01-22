@@ -1,0 +1,113 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img:hover {
+  transform: translateY(-30px);
+}
+
+button {
+  padding: 15px;
+  width: 350px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#add-student {
+  background-color: #2FB195;
+  color: white;
+}
+
+#add-student:hover {
+  background-color: #238670;
+}
+
+#view-students {
+  background-color: transparent;
+  border: 2px solid #000;
+  color: #000;
+}
+
+#view-students:hover {
+  background-color: #c7c7c7;
+}
+
+
+#modify-student {
+  background-color: palegoldenrod;
+  color: black;
+}
+
+#modify-student:hover {
+  background-color: goldenrod;
+}
+
+#remove-student {
+  background-color: #80A6ED;
+  color: black;
+}
+
+#remove-student:hover {
+  background-color: #5073b4;
+  color: white;
+}
+
+#sort-asc-student-name {
+  background-color: aliceblue;
+  color: black;
+}
+
+#sort-asc-student-name:hover {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+#sort-desc-student-name {
+  background-color: aliceblue;
+  color: black;
+}
+
+#sort-desc-student-name:hover {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+#sort-asc-student-grade {
+  background-color: blueviolet;
+  color: white;
+}
+
+#sort-asc-student-grade:hover {
+  background-color: darkblue;
+  color: white;
+}
+
+#sort-desc-student-grade {
+  background-color: blueviolet;
+  color: white;
+}
+
+#sort-desc-student-grade:hover {
+  background-color: darkblue;
+  color: white;
+}
+
+#remove-duplicate-students {
+  background-color: darkslategray;
+  color: white;
+}
+
+#remove-duplicate-students:hover {
+  background-color: black;
+  color: white;
+}
