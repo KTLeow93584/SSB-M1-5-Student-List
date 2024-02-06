@@ -22,21 +22,21 @@ function addStudent() {
   const name = prompt("Enter new student's name:");
   if (validateEmptyInput(name, "new student's name") === null)
     return;
-  
+
   const className = prompt("Enter new student's class name:");
   if (validateEmptyInput(className, "new student's class name") === null)
     return;
-  
+
   let grade = prompt("Enter new student's grade:");
   if (validateEmptyInput(grade, "new student's grades") === null)
     return;
-  
+
   grade = parseInt(grade);
   if (isNaN(grade)) {
     alert("The student's new grades input is not a valid number. Please try again.");
     return;
   }
-  
+
   const student = {
     name: name,
     className: className,
@@ -73,19 +73,19 @@ function modifyStudent() {
     alert(`(${studentName}) is not a student in this school. Please try again.`);
     return;
   }
-  
+
   const newStudentName = prompt("Enter the student's new name: ");
   if (validateEmptyInput(newStudentName, "student's new name") === null)
     return;
-  
+
   const newClassName = prompt("Enter student's new class name:");
   if (validateEmptyInput(newClassName, "student's new class name") === null)
     return;
-  
+
   let newGrade = prompt("Enter student's new grade:");
   if (newGrade === null)
     return;
-  
+
   newGrade = parseInt(newGrade);
   if (isNaN(newGrade)) {
     alert("The student's new grade input is not a valid number. Please try again.");
@@ -95,7 +95,7 @@ function modifyStudent() {
   students[studentIndex].name = newStudentName;
   students[studentIndex].className = newClassName;
   students[studentIndex].grade = newGrade;
-  
+
   alert(`${studentName}'s info has been successfully modified. (New Name: ${newStudentName})!`);
 }
 
@@ -119,7 +119,7 @@ function removeStudent() {
 
 function sortAlphabeticallyNameAsc() {
   if (students.length == 0)
-  return printEmptySchoolMessage("sort (Ascending Order - Grade)");
+    return printEmptySchoolMessage("sort (Ascending Order - Grade)");
 
   // Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
   // For characters in strings comparisons.
@@ -157,22 +157,22 @@ function sortAlphabeticallyGradeDesc() {
   alert("Successfully sorted students in an alphabetically descending order by their grades.");
 }
 
-function removeDuplicates() {  
+function removeDuplicates() {
   if (students.length == 0)
     return printEmptySchoolMessage("remove duplicates");
-  
+
   const uniqueStudents = [];
   const uniqueStudentsRepeatCountList = [];
 
   for (let i = 0; i < students.length; ++i) {
     const student = students[i];
-    let elementIndex = uniqueStudents.findIndex((uniqueStudent) => student.name === uniqueStudent.name & student.className === uniqueStudent.className );
-    
+    let elementIndex = uniqueStudents.findIndex((uniqueStudent) => student.name === uniqueStudent.name & student.className === uniqueStudent.className);
+
     if (elementIndex === -1) {
       uniqueStudents.push(student);
       uniqueStudentsRepeatCountList.push(0);
     }
-    else {      
+    else {
       students.splice(i, 1);
 
       ++uniqueStudentsRepeatCountList[elementIndex];
@@ -186,7 +186,7 @@ function removeDuplicates() {
     if (uniqueStudentsRepeatCountList[iter] == 0)
       return;
 
-      successfulDisplayMessage += `${element.name} from ${element.className}: ${uniqueStudentsRepeatCountList[iter]} time(s).\n`;
+    successfulDisplayMessage += `${element.name} from ${element.className}: ${uniqueStudentsRepeatCountList[iter]} time(s).\n`;
     if (foundDuplicates === false)
       foundDuplicates = true;
   });
